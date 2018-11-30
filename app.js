@@ -29,10 +29,14 @@ function drawEverything() {
 	colorRect(0,0,canvas.width,canvas.height, 'black')
 	//paddle
 	colorRect(0,210,10,100, 'white')
+	colorCirlcle(ballX, 150, 10, 'white')
+}
+
+function colorCirlcle(centerX, centerY, radius, drawColor) {
 	//ball
-	canvasContext.fillStyle = 'white'
+	canvasContext.fillStyle = drawColor
 	canvasContext.beginPath()
-	canvasContext.arc(ballX, 100, 10, 0,Math.PI*2, true)
+	canvasContext.arc(centerX, centerY, radius, 0,Math.PI*2, true)
 	canvasContext.fill()
 }
 
